@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define ERROR_INFO(rvalue, error_sign, msg, ...) { if(rvalue == error_sign){printf(msg, __VA_ARGS__);exit(1);}}
+#define ERROR_INFO(rvalue, error_sign, msg, ...) \{ if(rvalue == error_sign){printf(msg, __VA_ARGS__);exit(1);}}
 
 void test0() {
 	char* tmp = NULL;

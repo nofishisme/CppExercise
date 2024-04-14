@@ -34,21 +34,15 @@ char* my_strcat(const char* prefix, const char* suffix) {
 void test0() {
 	Vector *vec = vector_create();
 	printf("vec 初始的容量是: %d\n", vector_capacity(vec));
-	//char buff[2] = {0};
-	char insert_ch[1024] = { 0 };
+	char buff[2] = {0};
 	//使用自定义的my_srtcat函数返回一个拼接后的新的字符串指针，然后push进vec中
 	for (int i = 0; i < 100; ++i) {
-		char str[5];
-		snprintf(str, sizeof(str), "%d", i % 10);
-		char* ch = my_strcat(insert_ch, str);
-		strcpy(insert_ch, ch);
-		vector_push_back(vec, ch);
-		//_itoa(i % 10, buff, 10);
-		//if (i == 0) {//初始化第一个字符串
-		//	vector_push_back(vec, my_strcat(buff, ""));
-		//	continue;
-		//}
-		//vector_push_back(vec, my_strcat(vec->data[i - 1], buff));
+		_itoa(i % 10, buff, 10);
+		if (i == 0) {//初始化第一个字符串
+			vector_push_back(vec, my_strcat(buff, ""));
+			continue;
+		}
+		vector_push_back(vec, my_strcat(vec->data[i - 1], buff));
 	}
 
 	for (int i = 0; i < 100; i++) {

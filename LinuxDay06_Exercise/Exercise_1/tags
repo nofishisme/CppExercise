@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC := gcc$/;"	m
+COM_OP	Makefile	/^COM_OP := -Wall -g $/;"	m
+OUTS	Makefile	/^OUTS := $(patsubst %.c,%,$(SRCS))$/;"	m
+SRCS	Makefile	/^SRCS := $(wildcard *.c)$/;"	m
+copy_file	copy_file_by_open.c	/^void copy_file(const char* dest_file, const char* src_file) {$/;"	f
+count_dir	my_tree.c	/^static int count_dir = 0;$/;"	v	file:
+count_dir	my_tree1.c	/^static int count_dir = 0;$/;"	v	file:
+count_file	my_tree.c	/^static int count_file = 0;$/;"	v	file:
+count_file	my_tree1.c	/^static int count_file = 0;$/;"	v	file:
+flag_bool	my_tree.c	/^static bool flag_bool[1024];$/;"	v	file:
+flag_bool	my_tree1.c	/^static bool flag_bool[1024];$/;"	v	file:
+get_file_path	my_ls.c	/^char* get_file_path(const char* dirname, const char* filename){$/;"	f
+get_file_path	my_tree.c	/^char* get_file_path(const char* dirname, const char* filename){$/;"	f
+get_file_path	my_tree1.c	/^char* get_file_path(const char* dirname, const char* filename){$/;"	f
+get_next_entry	my_tree.c	/^struct dirent* get_next_entry(DIR* dirp){$/;"	f
+get_next_entry	my_tree1.c	/^struct dirent* get_next_entry(DIR* dirp){$/;"	f
+graph1	my_tree.c	/^static const char* graph1= "│   ";$/;"	v	file:
+graph1	my_tree1.c	/^static const char* graph1= "│   ";$/;"	v	file:
+graph2	my_tree.c	/^static const char* graph2= "    ";$/;"	v	file:
+graph2	my_tree1.c	/^static const char* graph2= "    ";$/;"	v	file:
+level	my_tree.c	/^static int level = 0;$/;"	v	file:
+level	my_tree1.c	/^static int level = 0;$/;"	v	file:
+main	copy_file_by_open.c	/^int main(int argc, char** argv)$/;"	f
+main	my_ls.c	/^int main(int argc, char** argv)$/;"	f
+main	my_tree.c	/^int main(int argc, char** argv)$/;"	f
+main	my_tree1.c	/^int main(int argc, char** argv)$/;"	f
+my_ls	my_ls.c	/^void my_ls(const char* dirname) {$/;"	f
+my_tree	my_tree.c	/^void my_tree(const char* dirname){$/;"	f
+my_tree	my_tree1.c	/^void my_tree(const char* dirname){$/;"	f
+my_tree_recrusion	my_tree.c	/^void my_tree_recrusion(const char* dirname) {$/;"	f
+my_tree_recrusion	my_tree1.c	/^void my_tree_recrusion(const char* dirname) {$/;"	f
+printBranch	my_tree.c	/^void printBranch(struct dirent* pdirent, DIR* dirp) {$/;"	f
+printBranch	my_tree1.c	/^void printBranch(struct dirent* pdirent, DIR* dirp) {$/;"	f
+printPreGraph	my_tree.c	/^void printPreGraph(void) {$/;"	f
+printPreGraph	my_tree1.c	/^void printPreGraph(void) {$/;"	f
+set_type_mode	my_ls.c	/^void set_type_mode(mode_t mode, char* str){$/;"	f

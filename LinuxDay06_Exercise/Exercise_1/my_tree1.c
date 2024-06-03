@@ -53,7 +53,7 @@ void printBranch(struct dirent* pdirent, DIR* dirp, const char *filepath) {
     if(pdirent->d_type == DT_DIR) {
         printf("\033[1;40;34m%s\033[0m\n", pdirent->d_name);
     } else if(statbuf.st_mode & 0100){
-        printf("\033[1;40;32m%s\033[0m*\n", pdirent->d_name);
+        printf("\033[1;40;32m%s\033[0m\n", pdirent->d_name);
     } else {
         printf("%s\n", pdirent->d_name);
     }
@@ -95,7 +95,9 @@ void my_tree_recrusion(const char* dirname) {
 }
 
 void my_tree(const char* dirname){
-    printf("%s\n", dirname);
+    int output_file_fd = open("output.txt", O_WRONLY | O_CREAT, 0666);
+    dup2(output_file_fd, STDOUT_FILENO);
+    printf("\033[1;40;34m%s\033[0m\n", dirname);
     my_tree_recrusion(dirname);
     printf("\n总文件数目：%d\t总目录数目：%d\n", count_file, count_dir);
 }

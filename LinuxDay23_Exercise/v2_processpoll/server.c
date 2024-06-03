@@ -16,7 +16,7 @@ int main(int argc, char** argv)
     //注册信号
     signal(SIGINT, func);
 
-    const char *sourceIP = "192.168.37.128";
+    const char *sourceIP = "192.168.37.130";
     const char *sourcePort = "8080";
 
     worker_process_t process_pool[3];

@@ -120,7 +120,7 @@ int handle_stdin(chat_connect * connection_set){
 int handle_message(chat_connect *connection_set, int epoll_fd, int connection_fd){
     char buf[1024];
     memset(buf, 0, 1024);
-    int ret = recv(connection_fd, buf, 1024, 0);
+    int ret = recv(connection_fd, buf + strlen(buf), 1024, 0);
     if (ret == 0) {
         printf("client disconnect, fd: %d\n", connection_fd);
         struct sockaddr_in peeraddr;
@@ -189,7 +189,7 @@ void handle_overtime_connection(chat_connect *connection_set,
 
 int main(int argc, char** argv)
 {
-    const char *sourceIP = "192.168.37.128";
+    const char *sourceIP = "192.168.37.130";
     const char *sourcePort = "8080";
 
     //初始化网络连接

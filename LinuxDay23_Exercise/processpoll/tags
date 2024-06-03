@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUSY	processpool.h	/^    BUSY$/;"	e	enum:stats
+FREE	processpool.h	/^    FREE,$/;"	e	enum:stats
+__WY_processpool_HPP__	processpool.h	3;"	d
+__WY_tcpConnection_HPP__	tcpConnection.h	3;"	d
+_pid	processpool.h	/^    int _pid; \/\/进程id$/;"	m	struct:worker_status_t
+_status	processpool.h	/^    int _status;\/\/进程状态：忙或空闲$/;"	m	struct:worker_status_t
+epoll_addfd	tcpConnection.c	/^int epoll_addfd(int epoll_fd, int file_fd){$/;"	f
+epoll_delfd	tcpConnection.c	/^int epoll_delfd(int epoll_fd, int file_fd){$/;"	f
+handle_message	tcpConnection.c	/^int handle_message(int net_fd){$/;"	f
+handle_new_connection	tcpConnection.c	/^int handle_new_connection(int epoll_fd, int socket_fd){$/;"	f
+initTcpSocket	tcpConnection.c	/^int initTcpSocket(int *socket_fd, const char *ip, const char *port){$/;"	f
+initprocesspool	processpool.c	/^int initprocesspool(worker_process_t *p, int num){$/;"	f
+main	client_dir/client.c	/^int main(int argc, char** argv)$/;"	f
+main	server.c	/^int main(int argc, char** argv)$/;"	f
+netToClient	processpool.c	/^int netToClient(int netfd){$/;"	f
+read_net_fd	processpool.c	/^int read_net_fd(int socket_local_fd, int *netfd){$/;"	f
+recvn	client_dir/client.c	/^int recvn(int fd, void * buff, int len)$/;"	f
+recvn	tcpConnection.c	/^int recvn(int fd, void * buff, int len)$/;"	f
+sendn	client_dir/client.c	/^int sendn(int fd, const void * buff, int len)$/;"	f
+sendn	tcpConnection.c	/^int sendn(int fd, const void * buff, int len)$/;"	f
+socket_local_fd	processpool.h	/^    int socket_local_fd;\/\/socket本地通信的文件描述符：用于main和子进程通信$/;"	m	struct:worker_status_t
+startWorker	processpool.c	/^int startWorker(int socket_local_fd){$/;"	f
+stats	processpool.h	/^typedef enum stats {$/;"	g
+status_t	processpool.h	/^}status_t;$/;"	t	typeref:enum:stats
+toProcessPoolDealNet	processpool.c	/^int toProcessPoolDealNet(int net_fd, worker_process_t *p, int num){$/;"	f
+worker_process_t	processpool.h	/^} worker_process_t;$/;"	t	typeref:struct:worker_status_t
+worker_status_t	processpool.h	/^typedef struct worker_status_t {$/;"	s
+write_net_fd	processpool.c	/^int write_net_fd(int socket_local_fd, int *net_fd){$/;"	f

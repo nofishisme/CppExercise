@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC := gcc$/;"	m
+COM_OP	Makefile	/^COM_OP := -Wall -g -lpthread -lncurses$/;"	m
+CONNECTION_LIMIT	server.c	3;"	d	file:
+OUTS	Makefile	/^OUTS := $(patsubst %.c,%,$(SRCS))$/;"	m
+SRCS	Makefile	/^SRCS := $(wildcard *.c)$/;"	m
+chat_connect	server.c	/^}chat_connect;$/;"	t	typeref:struct:connection_s	file:
+conection_fd	server.c	/^    int conection_fd;$/;"	m	struct:connection_s	file:
+connection_s	server.c	/^typedef struct connection_s{$/;"	s	file:
+epoll_addfd	server.c	/^int epoll_addfd(int epoll_fd, int file_fd){$/;"	f
+epoll_delfd	server.c	/^int epoll_delfd(int epoll_fd, int file_fd){$/;"	f
+handle_message	server.c	/^int handle_message(chat_connect *connection_set, int epoll_fd, int connection_fd){$/;"	f
+handle_new_connection	server.c	/^int handle_new_connection(chat_connect * connection_set, int epoll_fd, int socket_fd){$/;"	f
+handle_stdin	server.c	/^int handle_stdin(chat_connect * connection_set){$/;"	f
+initTcpSocket	server.c	/^int initTcpSocket(int *socket_fd, const char *ip, const char *port){$/;"	f
+is_alive	server.c	/^    bool is_alive;$/;"	m	struct:connection_s	file:
+main	client.c	/^int main(int argc, char** argv)$/;"	f
+main	server.c	/^int main(int argc, char** argv)$/;"	f
+recvn	client.c	/^int recvn(int fd, void * buff, int len)$/;"	f
+recvn	server.c	/^int recvn(int fd, void * buff, int len)$/;"	f
+sendn	client.c	/^int sendn(int fd, const void * buff, int len)$/;"	f
+sendn	server.c	/^int sendn(int fd, const void * buff, int len)$/;"	f
+the_time	server.c	/^    time_t the_time;$/;"	m	struct:connection_s	file:
